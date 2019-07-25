@@ -3,7 +3,7 @@ package com.everis.model;
 import lombok.Data;
 
 @Data
-public class Students {
+public class Student {
 
 	private int student_id;
 	private String gender;

@@ -1,30 +1,29 @@
 package com.everis.feign.controller;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.everis.feign.service.StudentsFeignService;
-import com.everis.model.Students;
-
-
+import com.everis.feign.service.StudentFeignService;
+import com.everis.model.Student;
 
 @RestController
-public class StudentsFeignController {
+@RequestMapping("/Student")
+public class StudentFeignController{
 
 	@Autowired
-	private StudentsFeignService studentsservice;
+	private StudentFeignService studentsFeignService;
 //	@GetMapping("/Get/{id}")
 //	public Optional<Students> get(@Valid@PathVariable("id") Integer id) ;
 
 	
+
 	@GetMapping("/Get")
-	public List<Students> findAll(){
-		return studentsservice.finAll();
-		
+	public List<Student > findAll() throws Exception {
+		return studentsFeignService.findAll();
 		
 	}
 }
