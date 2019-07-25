@@ -11,11 +11,11 @@ import com.everis.feign.service.StudentFeignService;
 import com.everis.model.Student;
 
 @RestController
-@RequestMapping("/Student")
+@RequestMapping("/student")
 public class StudentFeignController{
 
 	@Autowired
-	private StudentFeignService studentsFeignService;
+	private StudentFeignService studentFeignService;
 //	@GetMapping("/Get/{id}")
 //	public Optional<Students> get(@Valid@PathVariable("id") Integer id) ;
 
@@ -23,7 +23,7 @@ public class StudentFeignController{
 
 	@GetMapping("/Get")
 	public List<Student > findAll() throws Exception {
-		return studentsFeignService.findAll();
+		return studentFeignService.findAll();
 		
 	}
 }
