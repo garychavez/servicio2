@@ -1,13 +1,13 @@
 package com.everis.model;
 
 import java.util.Date;
+
+
 import lombok.Data;
 
-//Create my table
 @Data
 public class Classes  {
 
-	
 	private int class_id;
 	private int subject_id;
 	private int teacher_id;
