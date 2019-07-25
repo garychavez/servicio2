@@ -5,11 +5,14 @@ import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.everis.model.Student;
+import com.everis.model.Students;
+
+
 @FeignClient("MicroservicioStudent")
-public interface StudentFeignService{
+public interface StudentsFeignService{
 	
-	@GetMapping("/Get")	
-public List<Student> findAll();
+	@GetMapping("/Students/Get")	
+public List<Students> findAll();
+//public MSStudents finById(Integer id, Date date);
 
 }
