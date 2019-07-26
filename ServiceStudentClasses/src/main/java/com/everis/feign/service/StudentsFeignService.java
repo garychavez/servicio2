@@ -1,9 +1,13 @@
 package com.everis.feign.service;
 
 import java.util.List;
+import java.util.Optional;
+
+import javax.validation.Valid;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.everis.model.Students;
 
@@ -13,6 +17,8 @@ public interface StudentsFeignService{
 	
 	@GetMapping("/Students/Get")	
 public List<Students> findAll();
-//public MSStudents finById(Integer id, Date date);
 
+	@GetMapping("/Students/Get/{id}")
+	public Optional<Students> get(@Valid@PathVariable("id") Integer id) ;
+	
 }
