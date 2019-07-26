@@ -12,4 +12,5 @@ public class ServiceSecondApplication {
 		SpringApplication.run(ServiceSecondApplication.class, args);
 	}
 
+
 }
